@@ -1,8 +1,8 @@
 const EnquiryForm = () => {
   return (
     <div>
-      <div className="bg-black h-10 w-full mt-10"></div>
-      <section className="px-6 md:px-12 lg:px-20 pt-16 bg-white">
+      <div className="bg-[#111] h-10 w-full mt-10"></div>
+      <section className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20 pt-16 bg-white">
         <div className="">
           <h2 className="text-5xl md:text-6xl text-center font-avenir-light! mb-12">
             Sponsorship Enquiry Form

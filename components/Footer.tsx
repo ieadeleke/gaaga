@@ -48,7 +48,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="px-20 pt-20">
+    <footer className="max-w-[1800px] mx-auto px-20 pt-20">
       <div className="grid grid-cols-2 items-center">
         <div>
           <Image

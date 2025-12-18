@@ -15,7 +15,7 @@ import Link from "next/link";
 const MeetTheTeam = () => {
   const [hoverEffect, setHoverEffect] = useState<number | null>(null);
   return (
-    <section>
+    <section className="bg-[#111]">
       <div className="bg-accent pt-7 pb-9 w-full text-center">
         <h4 className="text-4xl mb-1">Meet Our Talents</h4>
         <p className="text-xl font-avenir-medium uppercase w-[75%] mx-auto text-center">
@@ -23,7 +23,7 @@ const MeetTheTeam = () => {
           storytellers shaping the next wave of African creativity.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-3 px-20 bg-black pb-32 pt-2">
+      <div className="max-w-[1800px] mx-auto grid grid-cols-4 gap-3 px-20 bg-[#111] pb-32 pt-2">
         <div className="relative team-bar">
           <Image
             src={Hero1Img}

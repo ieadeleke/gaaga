@@ -6,7 +6,7 @@ import Merch3 from "@/assets/images/merch-3.svg";
 
 const Merch = () => {
   return (
-    <section>
+    <section className="max-w-[1600px] mx-auto ">
       <h3 className="text-4xl uppercase text-center mb-10 mt-5">Gaaga 24 Merch </h3>
       <div className="px-20 grid grid-cols-[1fr_2fr] gap-2">
         <div className="">

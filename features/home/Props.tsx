@@ -8,7 +8,7 @@ import CoverImg from "@/assets/images/cover.svg";
 
 const HomeProps = () => {
   return (
-    <section>
+    <section className="bg-white">
       <div className="bg-accent pt-7 pb-7 w-full text-center relative">
         <h4 className="text-2xl">Building Africa’s Creative Future</h4>
         <Image
@@ -19,7 +19,7 @@ const HomeProps = () => {
           className="h-full inset-0 w-full absolute"
         />
       </div>
-      <div className="grid grid-cols-2 px-20 pb-14 pt-12 bg-white">
+      <div className="max-w-[1800px] mx-auto grid grid-cols-2 px-20 pb-14 pt-12 bg-white">
         <div className="mt-10">
           <p className="text-xl font-avenir-medium max-w-[550px] uppercase mb-20">
             Gaaga Agency connects creativity with capital. We invest in

@@ -6,7 +6,7 @@ import AboutHeroImg from "@/assets/images/about-hero.svg";
 const AboutHero = () => {
   return (
     <header className="pt-40 bg-[#111]">
-      <div className="flex items-top justify-center gap-5">
+      <div className="max-w-[1800px] mx-auto flex items-top justify-center gap-5">
         <h4 className="text-4xl text-white">About</h4>
         <Image
           src={GaageMain}
@@ -16,7 +16,7 @@ const AboutHero = () => {
           className="w-[550px] h-full"
         />
       </div>
-      <div className="px-28 mt-20">
+      <div className="max-w-[1800px] mx-auto px-28 mt-20">
         <div className="grid grid-cols-2 gap-10">
           <div className="mt-20">
             <h4 className="text-3xl font-avenir-light! text-white uppercase">

@@ -1,7 +1,7 @@
 const ContactForm = () => {
   return (
     <div>
-      <section className="px-6 md:px-12 lg:px-20 pt-20 pb-40">
+      <section className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20 pt-20 pb-40">
         <div className="">
           <form className="space-y-6">
             <div>

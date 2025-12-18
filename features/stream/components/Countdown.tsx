@@ -8,11 +8,11 @@ const Countdown = () => {
   return (
     <div>
       <section className="px-20 bg-[#111111] pt-8 pb-14">
-        <div className="relative rounded-[33px] py-20">
+        <div className="max-w-[1600px] mx-auto relative rounded-[33px] py-20 mb-2">
           <Image
             src={PatternImg}
             alt="network"
-            className="w-full h-full inset-0 absolute z-10"
+            className="w-full h-full inset-0 absolute z-10 object-cover rounded-4xl"
           />
           <div className="max-w-[431px] mx-auto z-20 relative">
             <h3 className="text-5xl text-white uppercase text-center mb-5">
@@ -27,12 +27,12 @@ const Countdown = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-[1fr_1.3fr] gap-0">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-[1fr_1.3fr] gap-4">
           <div>
-            <Image src={ContentsImg} alt="contents" className="w-full h-[340px]" />
+            <Image src={ContentsImg} alt="contents" className="w-full h-[340px] object-cover rounded-4xl" />
           </div>
           <div>
-            <Image src={OriginalImg} alt="original" className="w-full h-[340px]" />
+            <Image src={OriginalImg} alt="original" className="w-full h-[340px] object-cover rounded-4xl" />
           </div>
         </div>
       </section>

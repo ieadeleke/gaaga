@@ -5,7 +5,7 @@ import GaageMain from "@/assets/images/abt-main.svg";
 const AboutProps = () => {
   return (
     <section className="px-20 mt-32">
-      <div className="relative pt-28 pb-20">
+      <div className="md:max-w-[1240px] mx-auto relative pt-28 pb-20">
         <div className="mb-32 z-20 relative px-10">
           <p className="text-2xl uppercase text-white w- [0%] max-w-[520px] text-right ml-auto font-avenir-light">
             Our mission is simple: To empower African creators with the tools,
@@ -25,7 +25,7 @@ const AboutProps = () => {
             alt="Gaaga about hero design"
             width={1000}
             height={1000}
-            className="absolute inset-0 z-10 w-full h-full min-w-[1240px]"
+            className="absolute inset-0 z-10 w-full h-full md:min-w-[1240px]"
           />
         </div>
       </div>

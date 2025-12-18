@@ -14,7 +14,7 @@ const ContactHero = () => {
         height={1000}
       />
       <div className="px-24">
-        <div className="relative">
+        <div className="max-w-[1800px] mx-auto relative">
           <Image
             src={ContactImg}
             alt=""
