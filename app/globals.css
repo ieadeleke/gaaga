@@ -1,8 +1,33 @@
+@font-face {
+  font-family: 'Avenir Next';
+  /* src: url('/Avenir/AvenirLTStd-Medium.otf'); */
+  src: url('/Avenir/AvenirLTStd-Black.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Light';
+  /* src: url('/Avenir/AvenirLTStd-Medium.otf'); */
+  src: url('/public/Avenir/AvenirLTStd-Light.otf');
+}
+
+@font-face {
+  font-family: 'Avenir Medium';
+  /* src: url('/Avenir/AvenirLTStd-Medium.otf'); */
+  src: url('/public/Avenir/AvenirLTStd-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Milker';
+  src: url('/Milker.otf');
+}
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #FDC500;
+  --primary: #8A38F5;
 }
 
 @theme inline {
@@ -10,17 +35,88 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-avenir-light: 'Avenir Light';
+  --font-avenir: 'Avenir Next';
+  --font-avenir-medium: 'Avenir Medium';
+  --font-milker: 'Milker';
+  --color-accent: var(--accent);
+  --color-primary: var(--primary);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Avenir Next';
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Milker';
+}
+
+.stream-hero {
+  background: url('/stream.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
+}
+
+.hover-action-bar {
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.team-bar .main-img {
+  transition: opacity .5s ease-in-out;
+}
+
+.team-bar:hover .hover-action-bar {
+  opacity: 1;
+}
+
+.team-bar:hover .main-img {
+  opacity: 100;
+}
+
+.black-gradient {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.stepped-mask {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  
+  /* The polygon defines X and Y coordinates for each point */
+  /* This creates 4 steps on the left and 4 on the right */
+  clip-path: polygon(
+    /* Left side steps */
+    15% 0%, 10% 25%, 5% 25%, 0% 50%, 5% 50%, 0% 75%, 5% 75%, 0% 100%, 
+    /* Right side steps */
+    85% 100%, 90% 75%, 95% 75%, 100% 50%, 95% 50%, 100% 25%, 95% 25%, 100% 0%
+  );
+}
+
+.stepped-mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .string img {
+  transition:  width .5s ease-in-out;
+  height: 63px;
+  width: 58px;
+}
+
+.string:hover img {
+  width: 40px;
+  height: 63px;
+  object-fit: cover;
+} */
