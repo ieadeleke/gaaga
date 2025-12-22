@@ -13,7 +13,7 @@ const HomeHero = () => {
           height={1000}
           className="w-[550px] mx-auto h-full mb-24"
         />
-        <div className="sawtooth-mask relative">
+        <div className="sawtooth-mask relative mb-10">
           <Image
             src={Hero4Img}
             alt="checklist"
