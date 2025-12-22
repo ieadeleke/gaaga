@@ -80,7 +80,7 @@ const HomeHero = () => {
           ref={heroRef}
           onMouseMove={handleMove}
           onMouseLeave={handleLeave}
-          className="sawtooth-mask relative pb-16"
+          className={`sawtooth-mask relative ${!expanded && 'mb-16'}`}
         >
           <Image
             src={expanded ? HeroStillImg : Hero4Img}
@@ -116,7 +116,7 @@ const HomeHero = () => {
                 className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 select-none"
                 style={{ left: pos.x, top: pos.y }}
               >
-                <span className="bg-accent text-black border-2 border-black rounded-full px-6 py-3 shadow-[4px_4px_0_0_#000] font-avenir-medium whitespace-nowrap">
+                <span className="bg-accent text-black border-2 border-black uppercase rounded-full px-4 py-2 text-sm shadow-[4px_4px_0_0_#000] font-avenir-medium whitespace-nowrap">
                   Expand
                 </span>
               </button>
@@ -137,12 +137,12 @@ const HomeHero = () => {
             unoptimized
             width={2000}
             height={1200}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover pointer-events-none"
           />
           <button
             type="button"
             onClick={() => setExpanded(false)}
-            className="absolute top-4 right-4 bg-white text-black rounded-md px-3 py-1 text-sm border border-black shadow"
+            className="absolute bottom-4 right-4 z-10 bg-white text-black rounded-md px-3 py-1 text-sm border border-black shadow"
           >
             Close
           </button>
