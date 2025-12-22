@@ -46,7 +46,7 @@ const Navigation = () => {
           </Link>
           <Link
             href="/stream"
-            className="border-2 border-solid border-primary text-primary py-3 px-8 text-sm rounded-lg"
+            className="bg-transparent border-2 border-solid border-primary text-primary hover:text-accent py-3 px-8 text-sm rounded-lg"
           >
             Partner
           </Link>

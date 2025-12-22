@@ -140,3 +140,43 @@ h6 {
   object-fit: cover;
   background-color: #FDC500; /* Matching your yellow brand color */
 }
+
+/* Interactive button hover shadows */
+/* Accent buttons: thick primary shadow on hover */
+a.bg-accent,
+button.bg-accent {
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+  box-shadow: 0 0 0 0 transparent;
+  position: relative;
+}
+
+a.bg-accent:hover,
+button.bg-accent:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 0 var(--primary);
+}
+
+/* Transparent buttons (typically outlined): fill primary + accent shadow on hover */
+a.bg-transparent.border-2,
+button.bg-transparent.border-2 {
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease;
+  box-shadow: 0 0 0 0 transparent;
+  position: relative;
+}
+
+a.bg-transparent.border-2:hover,
+button.bg-transparent.border-2:hover {
+  background-color: var(--primary);
+  color: var(--accent);
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 0 var(--accent);
+}
+
+/* Optional active press state: drop back into place */
+a.bg-accent:active,
+button.bg-accent:active,
+a.bg-transparent.border-2:active,
+button.bg-transparent.border-2:active {
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 0 transparent;
+}
