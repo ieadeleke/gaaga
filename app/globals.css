@@ -92,15 +92,14 @@ h6 {
   max-width: 800px;
   aspect-ratio: 16 / 9;
   background: #000;
-  
+
   /* The polygon defines X and Y coordinates for each point */
   /* This creates 4 steps on the left and 4 on the right */
   clip-path: polygon(
-    /* Left side steps */
-    15% 0%, 10% 25%, 5% 25%, 0% 50%, 5% 50%, 0% 75%, 5% 75%, 0% 100%, 
-    /* Right side steps */
-    85% 100%, 90% 75%, 95% 75%, 100% 50%, 95% 50%, 100% 25%, 95% 25%, 100% 0%
-  );
+      /* Left side steps */
+      15% 0%, 10% 25%, 5% 25%, 0% 50%, 5% 50%, 0% 75%, 5% 75%, 0% 100%,
+      /* Right side steps */
+      85% 100%, 90% 75%, 95% 75%, 100% 50%, 95% 50%, 100% 25%, 95% 25%, 100% 0%);
 }
 
 .stepped-mask img {
@@ -120,3 +119,24 @@ h6 {
   height: 63px;
   object-fit: cover;
 } */
+.sawtooth-mask {
+  /* Set your desired width/height or make it 100% */
+  width: 100%;
+  aspect-ratio: 1428 / 707; 
+  
+  /* The Jagged Path */
+  clip-path: polygon(
+    /* Top Edge */
+    12.3% 6.8%, 99.7% 0%, 
+    /* Right Jagged Edge */
+    95.6% 18.5%, 97.7% 18.3%, 93.6% 36.8%, 95.8% 36.6%, 91.7% 55.2%, 93.8% 55.0%, 89.7% 73.5%, 91.8% 73.3%, 87.7% 91.9%, 
+    /* Bottom Edge */
+    0.3% 98.8%, 
+    /* Left Jagged Edge */
+    4.4% 80.3%, 2.3% 80.5%, 6.3% 62.0%, 4.2% 62.2%, 8.3% 43.7%, 6.2% 43.9%, 10.3% 25.3%, 8.2% 25.5%, 12.3% 6.8%
+  );
+
+  /* Style adjustments for your image */
+  object-fit: cover;
+  background-color: #FDC500; /* Matching your yellow brand color */
+}
