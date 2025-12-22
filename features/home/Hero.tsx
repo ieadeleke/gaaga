@@ -1,10 +1,73 @@
+"use client";
+
+import { useEffect, useRef, useState, type MouseEventHandler } from "react";
 import Image from "next/image";
 import GaageMain from "@/assets/images/gaaga-huge.svg";
 import Hero4Img from "@/assets/images/hero.gif";
+import HeroStillImg from "@/assets/images/hero_4.png";
 
 const HomeHero = () => {
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const targetRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [pos, setPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  useEffect(() => {
+    let raf: number;
+    let running = true;
+    const ease = 0.15; // lower = more floaty
+
+    const tick = () => {
+      const t = targetRef.current;
+      setPos((p) => ({
+        x: p.x + (t.x - p.x) * ease,
+        y: p.y + (t.y - p.y) * ease,
+      }));
+      if (running) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => {
+      running = false;
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  const handleMove: MouseEventHandler<HTMLDivElement> = (e) => {
+    if (expanded) return;
+    const rect = heroRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    targetRef.current = { x, y };
+    if (!visible) {
+      setPos({ x, y });
+      setVisible(true);
+    }
+  };
+
+  const handleLeave = () => {
+    setVisible(false);
+  };
+
+  // Close overlay on Escape
+  useEffect(() => {
+    if (!expanded) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setExpanded(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [expanded]);
+
+  const onExpandClick = () => {
+    setVisible(false);
+    setExpanded(true);
+  };
+
   return (
-    <header className="pt-40">
+    <header className="pt-40 relative">
       <div>
         <Image
           src={GaageMain}
@@ -13,9 +76,14 @@ const HomeHero = () => {
           height={1000}
           className="w-[550px] mx-auto h-full mb-24"
         />
-        <div className="sawtooth-mask relative mb-16">
+        <div
+          ref={heroRef}
+          onMouseMove={handleMove}
+          onMouseLeave={handleLeave}
+          className="sawtooth-mask relative pb-16"
+        >
           <Image
-            src={Hero4Img}
+            src={expanded ? HeroStillImg : Hero4Img}
             alt="checklist"
             width={1000}
             height={1000}
@@ -38,8 +106,48 @@ const HomeHero = () => {
               </button>
             </div>
           </div>
+
+          
+          <div className="hidden md:block absolute inset-0 pointer-events-none">
+            {visible && (
+              <button
+                type="button"
+                onClick={onExpandClick}
+                className="pointer-events-auto absolute -translate-x-1/2 -translate-y-1/2 select-none"
+                style={{ left: pos.x, top: pos.y }}
+              >
+                <span className="bg-accent text-black border-2 border-black rounded-full px-6 py-3 shadow-[4px_4px_0_0_#000] font-avenir-medium whitespace-nowrap">
+                  Expand
+                </span>
+              </button>
+            )}
+          </div>
+
+          
+          {false && (
+            <div />
+          )}
         </div>
       </div>
+      {expanded && (
+        <div ref={overlayRef} className="absolute inset-0 z-40 bg-transparent">
+          <Image
+            src={Hero4Img}
+            alt="hero animation"
+            unoptimized
+            width={2000}
+            height={1200}
+            className="w-full h-full object-cover"
+          />
+          <button
+            type="button"
+            onClick={() => setExpanded(false)}
+            className="absolute top-4 right-4 bg-white text-black rounded-md px-3 py-1 text-sm border border-black shadow"
+          >
+            Close
+          </button>
+        </div>
+      )}
     </header>
   );
 };
