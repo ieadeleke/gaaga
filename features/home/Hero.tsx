@@ -1,6 +1,5 @@
 import Image from "next/image";
 import GaageMain from "@/assets/images/gaaga-huge.svg";
-import MaskImg from "@/assets/images/mask.png";
 import Hero4Img from "@/assets/images/hero.gif";
 
 const HomeHero = () => {
@@ -38,18 +37,6 @@ const HomeHero = () => {
                 Pitch your Project
               </button>
             </div>
-          </div>
-        </div>
-        <div className="w-[50%] mx-auto">
-          <div className="stepped-mas">
-            {/* <Image
-            src={MaskImg}
-            alt="Gaaga stylish design"
-            width={1000}
-            height={1000}
-            className="w-full mx-auto h-full"
-          /> */}
-            <div className="w-full h-[30rem]"></div>
           </div>
         </div>
       </div>
