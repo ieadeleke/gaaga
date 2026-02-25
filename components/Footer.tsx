@@ -5,6 +5,7 @@ import LogoImg from "@/assets/images/logo-main.svg";
 import LogoJiggleImg from "@/assets/images/logo-jiggle.svg";
 import Image from "next/image";
 import Sitelinks from "@/utils/SiteLinks";
+import { FadeIn, SlideIn } from "@/components/Motion";
 
 const Footer = () => {
   const FooterSiteLinks = [
@@ -48,26 +49,26 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="max-w-[1800px] mx-auto px-20 pt-20">
-      <div className="grid grid-cols-2 items-center">
-        <div>
+    <footer className="max-w-[1800px] mx-auto px-6 md:px-20 pt-10 md:pt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-0">
+        <SlideIn direction="left">
           <Image
             src={LogoJiggleImg}
             alt="arrow icon"
             width={450}
             height={400}
-            className="w-[450px] h-auto mb-7"
+            className="w-[280px] md:w-[450px] h-auto mb-7"
           />
-        </div>
-        <div>
+        </SlideIn>
+        <FadeIn delay={0.2}>
           <Image
             src={LogoImg}
             alt="arrow icon"
             width={200}
             height={200}
-            className="w-40 h-auto mb-7"
+            className="w-28 md:w-40 h-auto mb-7"
           />
-          <div className="grid grid-cols-2 mb-20">
+          <div className="grid grid-cols-2 mb-10 md:mb-20">
             <div>
               <h5 className="uppercase mb-5 font-avenir-light! text-black font-normal">
                 Agency
@@ -108,11 +109,11 @@ const Footer = () => {
               <h4 className="font-avenir!">Let's talk</h4>
               <Image src={ArrowImg} alt="arrow icon" width={24} height={24} />
             </div>
-            <p className="text-lg w-[90%] leading-loose md:leading-normal font-avenir-light mb-5">
+            <p className="text-base md:text-lg w-full md:w-[90%] leading-loose md:leading-normal font-avenir-light mb-5">
               A monthly pulse check on the culture—ideas, patterns, and shifts
               worth paying attention to, crafted to inspire your next move.
             </p>
-            <div className="flex gap-4 mb-24">
+            <div className="flex gap-4 mb-12 md:mb-24">
               <label htmlFor="subscribe" className="sr-only">
                 Email
               </label>
@@ -127,17 +128,17 @@ const Footer = () => {
               </button>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
-      <div className="">
-        <ul className="flex items-center justify-center gap-20 pb-2">
+      <div>
+        <ul className="flex items-center justify-center gap-6 md:gap-20 pb-2">
           <li>
-            <Link href="" className="font-avenir-light">
+            <Link href="" className="font-avenir-light text-sm md:text-base">
               Privacy Policy
             </Link>
           </li>
           <li>
-            <Link href="" className="font-avenir-light">
+            <Link href="" className="font-avenir-light text-sm md:text-base">
               Terms and Conditions
             </Link>
           </li>

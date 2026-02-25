@@ -11,20 +11,23 @@ import ArrowImg from "@/assets/images/arrow.svg";
 import { FaFacebookF } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
 import Link from "next/link";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/Motion";
 
 const MeetTheTeam = () => {
   const [hoverEffect, setHoverEffect] = useState<number | null>(null);
   return (
     <section className="bg-[#111]">
-      <div className="bg-accent pt-7 pb-9 w-full text-center">
-        <h4 className="text-4xl mb-1">Meet Our Talents</h4>
-        <p className="text-xl font-avenir-medium uppercase w-[75%] mx-auto text-center">
-          A growing network of artists, designers, filmmakers, and digital
-          storytellers shaping the next wave of African creativity.
-        </p>
-      </div>
-      <div className="max-w-[1800px] mx-auto grid grid-cols-4 gap-3 px-20 bg-[#111] pb-32 pt-2">
-        <div className="relative team-bar">
+      <FadeIn>
+        <div className="bg-accent pt-5 md:pt-7 pb-6 md:pb-9 w-full text-center px-4">
+          <h4 className="text-2xl md:text-4xl mb-1">Meet Our Talents</h4>
+          <p className="text-sm md:text-xl font-avenir-medium uppercase w-[90%] md:w-[75%] mx-auto text-center">
+            A growing network of artists, designers, filmmakers, and digital
+            storytellers shaping the next wave of African creativity.
+          </p>
+        </div>
+      </FadeIn>
+      <StaggerContainer className="max-w-[1800px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 px-4 md:px-20 bg-[#111] pb-16 md:pb-32 pt-2">
+        <StaggerItem className="relative team-bar">
           <Image
             src={Hero1Img}
             alt="checklist"
@@ -43,25 +46,25 @@ const MeetTheTeam = () => {
             <div className="absolute inset-0 z-30 black-gradient"></div>
           </div>
           <div className="hover-action-bar absolute inset-0 flex items-center justify-center z-40">
-            <div className="">
-              <button className="bg-accent text-xl flex items-center gap-2 py-3 px-5 rounded-lg border-3 border-black font-milker">
+            <div>
+              <button className="bg-accent text-sm md:text-xl flex items-center gap-2 py-2 md:py-3 px-3 md:px-5 rounded-lg border-3 border-black font-milker">
                 BOOK
                 <Image src={ArrowImg} alt="arrow icon" width={24} height={24} />
               </button>
             </div>
-            <div className="absolute bottom-10 left-10">
-              <h3 className="text-3xl uppercase font-avenir! text-accent mb-2">
+            <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10">
+              <h3 className="text-xl md:text-3xl uppercase font-avenir! text-accent mb-2">
                 Bailey <br /> Sarian
               </h3>
               <div className="flex gap-3">
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaFacebookF />
                 </Link>
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaSnapchatGhost />
@@ -69,8 +72,8 @@ const MeetTheTeam = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="relative team-bar">
+        </StaggerItem>
+        <StaggerItem className="relative team-bar">
           <Image
             src={Hero2Img}
             alt="checklist"
@@ -89,25 +92,25 @@ const MeetTheTeam = () => {
             <div className="absolute inset-0 z-30 black-gradient"></div>
           </div>
           <div className="hover-action-bar absolute inset-0 flex items-center justify-center z-40">
-            <div className="">
-              <button className="bg-accent text-xl flex items-center gap-2 py-3 px-5 rounded-lg border-3 border-black font-milker">
+            <div>
+              <button className="bg-accent text-sm md:text-xl flex items-center gap-2 py-2 md:py-3 px-3 md:px-5 rounded-lg border-3 border-black font-milker">
                 BOOK
                 <Image src={ArrowImg} alt="arrow icon" width={24} height={24} />
               </button>
             </div>
-            <div className="absolute bottom-10 left-10">
-              <h3 className="text-3xl uppercase font-avenir! text-accent mb-2">
+            <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10">
+              <h3 className="text-xl md:text-3xl uppercase font-avenir! text-accent mb-2">
                 Bailey <br /> Sarian
               </h3>
               <div className="flex gap-3">
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaFacebookF />
                 </Link>
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaSnapchatGhost />
@@ -115,8 +118,8 @@ const MeetTheTeam = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="relative team-bar">
+        </StaggerItem>
+        <StaggerItem className="relative team-bar">
           <Image
             src={Hero3Img}
             alt="checklist"
@@ -135,25 +138,25 @@ const MeetTheTeam = () => {
             <div className="absolute inset-0 z-30 black-gradient"></div>
           </div>
           <div className="hover-action-bar absolute inset-0 flex items-center justify-center z-40">
-            <div className="">
-              <button className="bg-accent text-xl flex items-center gap-2 py-3 px-5 rounded-lg border-3 border-black font-milker">
+            <div>
+              <button className="bg-accent text-sm md:text-xl flex items-center gap-2 py-2 md:py-3 px-3 md:px-5 rounded-lg border-3 border-black font-milker">
                 BOOK
                 <Image src={ArrowImg} alt="arrow icon" width={24} height={24} />
               </button>
             </div>
-            <div className="absolute bottom-10 left-10">
-              <h3 className="text-3xl uppercase font-avenir! text-accent mb-2">
+            <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10">
+              <h3 className="text-xl md:text-3xl uppercase font-avenir! text-accent mb-2">
                 Bailey <br /> Sarian
               </h3>
               <div className="flex gap-3">
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaFacebookF />
                 </Link>
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaSnapchatGhost />
@@ -161,8 +164,8 @@ const MeetTheTeam = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="relative team-bar">
+        </StaggerItem>
+        <StaggerItem className="relative team-bar">
           <Image
             src={Hero4Img}
             alt="checklist"
@@ -181,25 +184,25 @@ const MeetTheTeam = () => {
             <div className="absolute inset-0 z-30 black-gradient"></div>
           </div>
           <div className="hover-action-bar absolute inset-0 flex items-center justify-center z-40">
-            <div className="">
-              <button className="bg-accent text-xl flex items-center gap-2 py-3 px-5 rounded-lg border-3 border-black font-milker">
+            <div>
+              <button className="bg-accent text-sm md:text-xl flex items-center gap-2 py-2 md:py-3 px-3 md:px-5 rounded-lg border-3 border-black font-milker">
                 BOOK
                 <Image src={ArrowImg} alt="arrow icon" width={24} height={24} />
               </button>
             </div>
-            <div className="absolute bottom-10 left-10">
-              <h3 className="text-3xl uppercase font-avenir! text-accent mb-2">
+            <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10">
+              <h3 className="text-xl md:text-3xl uppercase font-avenir! text-accent mb-2">
                 Bailey <br /> Sarian
               </h3>
               <div className="flex gap-3">
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaFacebookF />
                 </Link>
                 <Link
-                  className="border-2 border-accent text-accent size-10 rounded-full flex items-center justify-center"
+                  className="border-2 border-accent text-accent size-8 md:size-10 rounded-full flex items-center justify-center text-xs md:text-base"
                   href="#"
                 >
                   <FaSnapchatGhost />
@@ -207,8 +210,8 @@ const MeetTheTeam = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </StaggerItem>
+      </StaggerContainer>
     </section>
   );
 };

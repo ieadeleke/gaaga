@@ -2,15 +2,18 @@
 
 import { useEffect, useRef, useState, type MouseEventHandler } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import GaageMain from "@/assets/images/gaaga-huge.svg";
 import Hero4Img from "@/assets/images/hero.gif";
 import HeroStillImg from "@/assets/images/hero_4.png";
+import CreatorsShowcase from "./CreatorsShowcase";
 
 const HomeHero = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const [showCreators, setShowCreators] = useState(false);
   const targetRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const [pos, setPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
@@ -67,20 +70,26 @@ const HomeHero = () => {
   };
 
   return (
-    <header className="pt-40 relative">
+    <header className="pt-24 md:pt-40 relative">
       <div>
-        <Image
-          src={GaageMain}
-          alt="Gaaga stylish design"
-          width={1000}
-          height={1000}
-          className="w-[550px] mx-auto h-full mb-24"
-        />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <Image
+            src={GaageMain}
+            alt="Gaaga stylish design"
+            width={1000}
+            height={1000}
+            className="w-[280px] md:w-[550px] mx-auto h-full mb-10 md:mb-24"
+          />
+        </motion.div>
         <div
           ref={heroRef}
           onMouseMove={handleMove}
           onMouseLeave={handleLeave}
-          className={`sawtooth-mask relative ${!expanded && 'mb-16'}`}
+          className={`sawtooth-mask relative ${!expanded && 'mb-8 md:mb-16'}`}
         >
           <Image
             src={expanded ? HeroStillImg : Hero4Img}
@@ -89,25 +98,43 @@ const HomeHero = () => {
             height={1000}
             className="w-full h-full object-cover"
           />
-          <div className="text-center max-w-[752px] mx-auto absolute inset-0 top-20">
-            <h1 className="text-4xl text-white mb-3">
-              Growing With Emerging Creators.
-            </h1>
-            <p className="text-xl w-[90%] mx-auto font-avenir-medium text-white mb-20">
-              Gaaga Agency is a venture studio empowering Africa’s next
-              generation of digital creators — turning creativity into capital.
-            </p>
-            <div className="flex items-center justify-center gap-5">
-              <button className="bg-accent rounded-lg border-2 border-accent font-avenir-medium py-3 px-4 text-black">
-                View Our Projects
+          <div className="text-center max-w-[752px] mx-auto absolute inset-0 top-6 md:top-20 px-4">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-xl md:text-4xl text-white mb-2 md:mb-3"
+            >
+              Creators. Brands. Investment.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-sm md:text-xl w-[95%] md:w-[90%] mx-auto font-avenir-medium text-white mb-8 md:mb-20"
+            >
+              Gaaga is a venture studio that manages creators, powers brand
+              partnerships, and invests in Africa&apos;s next generation of digital talent.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="flex items-center justify-center gap-3 md:gap-5"
+            >
+              <button
+                onClick={() => setShowCreators(true)}
+                className="bg-accent rounded-lg border-2 border-accent font-avenir-medium py-2 md:py-3 px-3 md:px-4 text-xs md:text-base text-black"
+              >
+                For Creators
               </button>
-              <button className="border-2 rounded-lg bg-transparent border-accent font-avenir-medium text-accent py-3 px-4 capitalize">
-                Pitch your Project
+              <button className="border-2 rounded-lg bg-transparent border-accent font-avenir-medium text-accent py-2 md:py-3 px-3 md:px-4 text-xs md:text-base capitalize">
+                For Brands
               </button>
-            </div>
+            </motion.div>
           </div>
 
-          
+
           <div className="hidden md:block absolute inset-0 pointer-events-none">
             {visible && (
               <button
@@ -123,7 +150,7 @@ const HomeHero = () => {
             )}
           </div>
 
-          
+
           {false && (
             <div />
           )}
@@ -147,6 +174,9 @@ const HomeHero = () => {
             Close
           </button>
         </div>
+      )}
+      {showCreators && (
+        <CreatorsShowcase onClose={() => setShowCreators(false)} />
       )}
     </header>
   );

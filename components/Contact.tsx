@@ -10,7 +10,7 @@ interface ContactUsProps {
 
 const ContactUsPage = ({ hidePattern, page }: ContactUsProps) => {
   return (
-    <div className="px-20 max-w-[1450px] mx-auto z-20 relative">
+    <div className="px-4 md:px-20 max-w-[1450px] mx-auto z-20 relative">
       {/* <div className="border-20 rounde d-[20px] border-solid border-[#FFF5CD] relative"> */}
       <div className="relative">
         {hidePattern ? (
@@ -20,7 +20,7 @@ const ContactUsPage = ({ hidePattern, page }: ContactUsProps) => {
               alt="contact box"
               width={1000}
               height={1000}
-              className="w-full border-20 rounded-[30px] border-solid border-[#FFF5CD] relative"
+              className="w-full border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD] relative"
             />
           ) : (
             <Image
@@ -28,7 +28,7 @@ const ContactUsPage = ({ hidePattern, page }: ContactUsProps) => {
               alt="contact box"
               width={1000}
               height={1000}
-              className="w-full border-20 rounded-[30px] border-solid border-[#FFF5CD] relative"
+              className="w-full border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD] relative"
             />
           )
         ) : (
@@ -38,21 +38,21 @@ const ContactUsPage = ({ hidePattern, page }: ContactUsProps) => {
               alt="contact box"
               width={1000}
               height={1000}
-              className="w-full border-20 rounded-[30px] border-solid border-[#FFF5CD] relative"
+              className="w-full border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD] relative"
             />
           </div>
         )}
-        <div className="w-full h-full absolute bg-black/10 inset-0 flex items-center justify-center">
-          <div className="max-w-[590px] text-center mx-auto">
-            <h3 className="text-2xl mb-3 uppercase text-white">
-              Be Among the first to know
+        <div className="w-full h-full absolute bg-black/10 inset-0 flex items-center justify-center rounded-2xl md:rounded-[30px]">
+          <div className="max-w-[590px] text-center mx-auto px-4">
+            <h3 className="text-lg md:text-2xl mb-3 uppercase text-white">
+              Ready to take your project to the next level?
             </h3>
-            <p className="text-2xl font-avenir-light text-white mb-6">
-              Have a question or want to work with us? We’d love to hear from
-              you.
+            <p className="text-sm md:text-2xl font-avenir-light text-white mb-4 md:mb-6">
+              Book a call with our team and discover how we can support your
+              creative journey or brand project.
             </p>
-            <button className="py-4 px-8 bg-accent text-base rounded-lg">
-              Contact Us
+            <button className="py-3 md:py-4 px-6 md:px-8 bg-accent text-sm md:text-base rounded-lg">
+              Schedule a Call
             </button>
           </div>
         </div>

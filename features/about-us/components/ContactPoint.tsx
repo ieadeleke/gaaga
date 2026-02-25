@@ -1,13 +1,16 @@
 import ContactUsPage from "@/components/Contact";
 import Image from "next/image";
 import PatternImg from "@/assets/images/big-pattern.svg";
+import { ScaleIn } from "@/components/Motion";
 
 const ContactPoint = () => {
   return (
     <section className="relative">
-      <div className="py-28">
-        <ContactUsPage hidePattern={true} />
-      </div>
+      <ScaleIn>
+        <div className="py-14 md:py-28">
+          <ContactUsPage hidePattern={true} />
+        </div>
+      </ScaleIn>
       <div className="">
         <Image
           src={PatternImg}

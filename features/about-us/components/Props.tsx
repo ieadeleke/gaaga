@@ -1,24 +1,25 @@
 import Image from "next/image";
 
 import GaageMain from "@/assets/images/abt-main.svg";
+import { SlideIn, SlideUp } from "@/components/Motion";
 
 const AboutProps = () => {
   return (
-    <section className="px-20 mt-32">
-      <div className="md:max-w-[1240px] mx-auto relative pt-28 pb-20">
-        <div className="mb-32 z-20 relative px-10">
-          <p className="text-2xl uppercase text-white w- [0%] max-w-[520px] text-right ml-auto font-avenir-light">
-            Our mission is simple: To empower African creators with the tools,
+    <section className="px-4 md:px-20 mt-16 md:mt-32">
+      <div className="md:max-w-[1240px] mx-auto relative pt-14 md:pt-28 pb-10 md:pb-20">
+        <SlideIn direction="right" className="mb-16 md:mb-32 z-20 relative px-4 md:px-10">
+          <p className="text-lg md:text-2xl uppercase text-white max-w-[520px] md:text-right md:ml-auto font-avenir-light">
+            Our mission is simple: To empower African creators with the tools,
             resources, and support they need to build careers that last.
           </p>
-        </div>
-        <div className="w-[540px] text-white uppercase z-20 relative px-8">
-          <h4 className="font-avenir-light! text-2xl mb-4">Our Vision?</h4>
-          <p className="text-2xl uppercase font-avenir-light">
-            To become Africa’s most trusted creator venture network — exporting
+        </SlideIn>
+        <SlideIn direction="left" delay={0.2} className="w-full md:w-[540px] text-white uppercase z-20 relative px-4 md:px-8">
+          <h4 className="font-avenir-light! text-xl md:text-2xl mb-4">Our Vision?</h4>
+          <p className="text-lg md:text-2xl uppercase font-avenir-light">
+            To become Africa's most trusted creator venture network — exporting
             talent, ideas, and culture to the world.
           </p>
-        </div>
+        </SlideIn>
         <div>
           <Image
             src={GaageMain}
