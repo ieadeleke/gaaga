@@ -45,14 +45,14 @@ const ContactUsPage = ({ hidePattern, page }: ContactUsProps) => {
         <div className="w-full h-full absolute bg-black/10 inset-0 flex items-center justify-center rounded-2xl md:rounded-[30px]">
           <div className="max-w-[590px] text-center mx-auto px-4">
             <h3 className="text-lg md:text-2xl mb-3 uppercase text-white">
-              Ready to take your project to the next level?
+              Your next chapter starts here.
             </h3>
             <p className="text-sm md:text-2xl font-avenir-light text-white mb-4 md:mb-6">
-              Book a call with our team and discover how we can support your
-              creative journey or brand project.
+              Are you a creator, a brand, or a collaborator; let&apos;s build
+              something worth watching.
             </p>
             <button className="py-3 md:py-4 px-6 md:px-8 bg-accent text-sm md:text-base rounded-lg">
-              Schedule a Call
+              Get in Touch
             </button>
           </div>
         </div>

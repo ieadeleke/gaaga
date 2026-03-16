@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import TalentImg from "@/assets/images/talent.svg";
 import StarImg from "@/assets/images/star.svg";
@@ -7,55 +7,53 @@ import MerchImg from "@/assets/images/merch.svg";
 import BrandImg from "@/assets/images/brand.svg";
 import { SlideUp, StaggerContainer, StaggerItem } from "@/components/Motion";
 
+const services: { label: string; img: StaticImageData; imgClass: string }[] = [
+  { label: "Content & Media Strategy",                  img: StarImg,   imgClass: "w-8 md:w-12" },
+  { label: "Content & Creative Production",             img: StarImg,   imgClass: "w-8 md:w-12" },
+  { label: "Content Production Support",                img: StarImg,   imgClass: "w-8 md:w-12" },
+  { label: "Brand Partnerships & Campaign Strategy",    img: BrandImg,  imgClass: "w-10 md:w-16" },
+  { label: "Talent Representation & Brand Development", img: TalentImg, imgClass: "w-8 md:w-12" },
+  { label: "Merchandising & Creative Commerce",         img: MerchImg,  imgClass: "w-8 md:w-12" },
+  { label: "Content Licensing",                         img: StarImg,   imgClass: "w-8 md:w-12" },
+  { label: "Merch & Co-Branded Drops",                  img: MerchImg,  imgClass: "w-8 md:w-12" },
+  { label: "Events & Live Moments",                     img: EventsImg, imgClass: "w-6 md:w-9"  },
+  { label: "Podcasting",                                img: StarImg,   imgClass: "w-8 md:w-12" },
+  { label: "Creator Micro-Fund (Early Stage)",          img: TalentImg, imgClass: "w-8 md:w-12" },
+  { label: "Business Strategy",                         img: BrandImg,  imgClass: "w-10 md:w-16" },
+];
+
 const OurEcosystem = () => {
   return (
     <div>
       <SlideUp>
-        <h3 className="text-2xl md:text-3xl uppercase text-center text-accent mb-6 md:mb-10">
-          Our Ecosystem
-        </h3>
+        <div className="text-center mb-6 md:mb-10">
+          <h3 className="text-2xl md:text-3xl uppercase text-accent">
+            Our Ecosystem
+          </h3>
+          <p className="text-white/50 uppercase font-avenir-light text-sm md:text-base tracking-widest mt-1">
+            Our Services
+          </p>
+        </div>
       </SlideUp>
       <StaggerContainer className="flex text-white flex-col max-w-300 mx-auto">
-        <StaggerItem>
-          <div className="flex gap-8 md:gap-32 items-center py-8 md:py-16 border-b border-solid border-white">
-            <div className="w-10 md:w-16 shrink-0">
-              <Image src={TalentImg} alt="Talent collaboration" width={200} height={200} className="w-8 md:w-12" />
+        {services.map((service, i) => (
+          <StaggerItem key={service.label}>
+            <div className={`group flex gap-8 md:gap-32 items-center py-6 md:py-12 cursor-default ${i < services.length - 1 ? "border-b border-solid border-white/20" : ""}`}>
+              <div className="w-10 md:w-16 shrink-0">
+                <Image
+                  src={service.img}
+                  alt=""
+                  width={200}
+                  height={200}
+                  className={`eco-img ${service.imgClass}`}
+                />
+              </div>
+              <h4 className="eco-text flex-1 text-lg md:text-3xl">
+                {service.label}
+              </h4>
             </div>
-            <h4 className="flex-1 text-lg md:text-3xl">Talent Representation & Brand Development</h4>
-          </div>
-        </StaggerItem>
-        <StaggerItem>
-          <div className="flex gap-8 md:gap-32 items-center py-8 md:py-16 border-b border-solid border-white">
-            <div className="w-10 md:w-16 shrink-0">
-              <Image src={StarImg} alt="Content & Creative Production" width={200} height={200} className="w-8 md:w-12" />
-            </div>
-            <h4 className="flex-1 text-lg md:text-3xl">Content Production Support</h4>
-          </div>
-        </StaggerItem>
-        <StaggerItem>
-          <div className="flex gap-8 md:gap-32 items-center py-8 md:py-16 border-b border-solid border-white">
-            <div className="w-10 md:w-16 shrink-0">
-              <Image src={EventsImg} alt="Events & Live Moments" width={200} height={200} className="w-6 md:w-9" />
-            </div>
-            <h4 className="flex-1 text-lg md:text-3xl">Merchandising & Creative Commerce</h4>
-          </div>
-        </StaggerItem>
-        <StaggerItem>
-          <div className="flex gap-8 md:gap-32 items-center py-8 md:py-16 border-b border-solid border-white">
-            <div className="w-10 md:w-16 shrink-0">
-              <Image src={MerchImg} alt="Merch & Co-Branded Drops" width={200} height={200} className="w-8 md:w-12" />
-            </div>
-            <h4 className="flex-1 text-lg md:text-3xl">Creator Micro-Fund (Early Stage)</h4>
-          </div>
-        </StaggerItem>
-        <StaggerItem>
-          <div className="flex gap-8 md:gap-32 items-center py-8 md:py-16">
-            <div className="w-10 md:w-16 shrink-0">
-              <Image src={BrandImg} alt="Brand Partnerships & Campaign Strategy" width={200} height={200} className="w-10 md:w-16" />
-            </div>
-            <h4 className="flex-1 text-lg md:text-3xl">Brand Partnerships & Campaign Strategy</h4>
-          </div>
-        </StaggerItem>
+          </StaggerItem>
+        ))}
       </StaggerContainer>
     </div>
   );

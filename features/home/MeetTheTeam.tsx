@@ -8,6 +8,7 @@ import Hero4Img from "@/assets/images/hero_4.svg";
 import Hero5Img from "@/assets/images/art.png";
 import { useState } from "react";
 import ArrowImg from "@/assets/images/arrow.svg";
+import LogoImg from "@/assets/images/logo-main.svg";
 import { FaFacebookF } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
 import Link from "next/link";
@@ -19,10 +20,10 @@ const MeetTheTeam = () => {
     <section className="bg-[#111]">
       <FadeIn>
         <div className="bg-accent pt-5 md:pt-7 pb-6 md:pb-9 w-full text-center px-4">
-          <h4 className="text-2xl md:text-4xl mb-1">Meet Our Talents</h4>
+          <h4 className="text-2xl md:text-4xl mb-1">Exceptional Talents. Delivering impact.</h4>
           <p className="text-sm md:text-xl font-avenir-medium uppercase w-[90%] md:w-[75%] mx-auto text-center">
-            A growing network of artists, designers, filmmakers, and digital
-            storytellers shaping the next wave of African creativity.
+            A growing roster of artists, filmmakers, designers, and storytellers
+            redefining what African creativity looks like on the global stage.
           </p>
         </div>
       </FadeIn>
@@ -35,6 +36,15 @@ const MeetTheTeam = () => {
             height={1000}
             className="object-cover mx-auto"
           />
+          <div className="team-bar-label absolute bottom-0 left-0 right-0 z-10 px-4 pb-5 pt-16 flex items-end justify-between black-gradient">
+            <p className="text-accent text-base md:text-2xl uppercase font-avenir tracking-widest leading-tight">
+              Bailey <br /> Sarian
+            </p>
+            <div className="flex items-center gap-3 text-white/90 font-avenir-light">
+              <span className="text-lg md:text-2xl">×</span>
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+            </div>
+          </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
             <Image
               src={Hero5Img}
@@ -81,6 +91,15 @@ const MeetTheTeam = () => {
             height={1000}
             className="object-cover mx-auto"
           />
+          <div className="team-bar-label absolute bottom-0 left-0 right-0 z-10 px-4 pb-5 pt-16 flex items-end justify-between black-gradient">
+            <p className="text-accent text-base md:text-2xl uppercase font-avenir tracking-widest leading-tight">
+              Bailey <br /> Sarian
+            </p>
+            <div className="flex items-center gap-3 text-white/90 font-avenir-light">
+              <span className="text-lg md:text-2xl">×</span>
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+            </div>
+          </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
             <Image
               src={Hero5Img}
@@ -127,6 +146,15 @@ const MeetTheTeam = () => {
             height={1000}
             className="object-cover mx-auto"
           />
+          <div className="team-bar-label absolute bottom-0 left-0 right-0 z-10 px-4 pb-5 pt-16 flex items-end justify-between black-gradient">
+            <p className="text-accent text-base md:text-2xl uppercase font-avenir tracking-widest leading-tight">
+              Bailey <br /> Sarian
+            </p>
+            <div className="flex items-center gap-3 text-white/90 font-avenir-light">
+              <span className="text-lg md:text-2xl">×</span>
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+            </div>
+          </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
             <Image
               src={Hero5Img}
@@ -173,6 +201,15 @@ const MeetTheTeam = () => {
             height={1000}
             className="object-cover mx-auto"
           />
+          <div className="team-bar-label absolute bottom-0 left-0 right-0 z-10 px-4 pb-5 pt-16 flex items-end justify-between black-gradient">
+            <p className="text-accent text-base md:text-2xl uppercase font-avenir tracking-widest leading-tight">
+              Bailey <br /> Sarian
+            </p>
+            <div className="flex items-center gap-3 text-white/90 font-avenir-light">
+              <span className="text-lg md:text-2xl">×</span>
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+            </div>
+          </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
             <Image
               src={Hero5Img}

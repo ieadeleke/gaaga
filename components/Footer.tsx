@@ -36,16 +36,20 @@ const Footer = () => {
   ];
   const FooterSocialLinks = [
     {
-      label: "LinkedIn",
-      link: "/linkedIn",
-    },
-    {
-      label: "Facebook",
-      link: "/facebook",
-    },
-    {
       label: "Instagram",
       link: "/instagram",
+    },
+    {
+      label: "YouTube",
+      link: "/youtube",
+    },
+    {
+      label: "X",
+      link: "/x",
+    },
+    {
+      label: "TikTok",
+      link: "/tiktok",
     },
   ];
   return (
@@ -88,7 +92,7 @@ const Footer = () => {
             </div>
             <div>
               <h5 className="uppercase mb-5 font-avenir-light! text-black font-normal">
-                Let's social
+                Let's Connect
               </h5>
               <ul className="flex flex-col gap-5">
                 {FooterSocialLinks.map(({ label, link }) => (
@@ -106,12 +110,12 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex gap-2 mb-3 items-center">
-              <h4 className="font-avenir!">Let's talk</h4>
+              <h4 className="font-avenir!">The Gaaga Pulse</h4>
               <Image src={ArrowImg} alt="arrow icon" width={24} height={24} />
             </div>
             <p className="text-base md:text-lg w-full md:w-[90%] leading-loose md:leading-normal font-avenir-light mb-5">
-              A monthly pulse check on the culture—ideas, patterns, and shifts
-              worth paying attention to, crafted to inspire your next move.
+              Culture, creativity, and what&apos;s actually moving on the continent.
+              In your inbox, monthly.
             </p>
             <div className="flex gap-4 mb-12 md:mb-24">
               <label htmlFor="subscribe" className="sr-only">

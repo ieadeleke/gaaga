@@ -12,12 +12,12 @@ const WhatWeDo = () => {
     {
       img: Home1,
       title: "Creators",
-      subtitle: "Management, representation, and growth strategy for Africa's next-gen digital talent.",
+      subtitle: "End-to-end management and growth strategy for Africa's boldest digital talent.",
     },
     {
       img: Home2,
       title: "Brand Partnerships",
-      subtitle: "Connecting brands with authentic creator voices through campaigns that convert.",
+      subtitle: "We know Talents. We know brands. We're all about connecting brands with creators who convert.",
     },
     {
       img: Home3,

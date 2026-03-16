@@ -51,7 +51,7 @@ const ContactForm = () => {
                 type="button"
                 className="w-full border-2 border-black rounded-lg bg-accent py-3 md:py-4 text-lg md:text-xl font-avenir-light font-avenir text-black"
               >
-                Contact Us
+                CONTACT US
               </button>
             </div>
           </form>

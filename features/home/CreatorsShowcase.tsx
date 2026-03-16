@@ -81,10 +81,10 @@ const CreatorsShowcase = ({ onClose }: CreatorsShowcaseProps) => {
 
         <div className="text-center mb-8 md:mb-10">
           <h3 className="text-2xl md:text-4xl uppercase text-accent mb-2">
-            Our Creators
+            Find Your Creator.
           </h3>
           <p className="text-sm md:text-base font-avenir-light text-white/80 max-w-[500px] mx-auto">
-            Tap on any creator to get in touch and start a conversation.
+            Browse our roster of Africa&apos;s boldest digital talent and book the one that fits your vision.
           </p>
         </div>
 
@@ -108,9 +108,12 @@ const CreatorsShowcase = ({ onClose }: CreatorsShowcaseProps) => {
                 <h4 className="text-base md:text-xl text-white font-avenir! uppercase leading-tight">
                   {creator.name}
                 </h4>
-                <p className="text-xs md:text-sm font-avenir-light text-accent">
+                <p className="text-xs md:text-sm font-avenir-light text-accent mb-2 md:mb-3">
                   {creator.category}
                 </p>
+                <span className="inline-block bg-accent text-black text-xs md:text-sm font-avenir-medium px-3 py-1.5 rounded-md">
+                  Book {creator.name}
+                </span>
               </div>
             </Link>
           ))}
@@ -122,7 +125,7 @@ const CreatorsShowcase = ({ onClose }: CreatorsShowcaseProps) => {
             onClick={onClose}
             className="inline-block bg-accent py-3 md:py-4 px-8 md:px-10 text-sm md:text-base text-black rounded-lg font-avenir-medium border-2 border-accent"
           >
-            Discover Your Next Creator
+            Contact Us
           </Link>
         </div>
       </div>

@@ -12,7 +12,7 @@ const HomeProps = () => {
     <section className="bg-white">
       <FadeIn>
         <div className="bg-accent pt-7 pb-7 w-full text-center relative">
-          <h4 className="text-xl md:text-2xl">Creators. Brands. Capital.</h4>
+          <h4 className="text-xl md:text-2xl">We sit at the intersection of talent, capital, and culture.</h4>
         <Image
           src={CoverImg}
           alt="cover"
@@ -26,9 +26,8 @@ const HomeProps = () => {
         <div className="mt-6 md:mt-10">
           <SlideIn direction="left">
             <p className="text-base md:text-xl font-avenir-medium max-w-[550px] uppercase mb-10 md:mb-20">
-              We manage creators, broker brand partnerships, and invest directly
-              in talent — giving Africa&apos;s digital-first generation the structure,
-              capital, and strategy to scale globally.
+              We manage talents, partner with brands driving popular culture and
+              invest directly in creators shaping Africa&apos;s internet culture.
             </p>
           </SlideIn>
           <SlideUp delay={0.2}>
@@ -72,9 +71,9 @@ const HomeProps = () => {
             </SlideIn>
             <SlideIn direction="right" delay={0.2}>
               <p className="text-base md:text-xl font-avenir-medium max-w-[480px] md:ml-auto uppercase mb-10 md:mb-20 md:text-right mt-10 md:mt-20">
-                Whether you&apos;re a creator looking for management, a brand seeking
-                authentic partnerships, or an investor backing Africa&apos;s creative
-                economy — Gaaga is where it all connects.
+                Whether you&apos;re a creator ready to scale, a brand looking for
+                authentic reach, or an investor backing Africa&apos;s creative future,
+                Gaaga is the partner built for this moment.
               </p>
             </SlideIn>
           </div>

@@ -27,11 +27,10 @@ const ContactHero = () => {
             <SlideUp>
               <div className="text-center">
                 <h4 className="text-2xl md:text-4xl text-accent uppercase mb-2">
-                  Get in Touch
+                  Let&apos;s make it happen.
                 </h4>
                 <p className="text-base md:text-2xl text-white w-[90%] md:w-[60%] mx-auto font-avenir-light">
-                  Request for a Demo and see how Juno works for your business in
-                  just a few minutes.
+                  Tell us a little about what you have in mind and we&apos;ll take it from there.
                 </p>
               </div>
             </SlideUp>

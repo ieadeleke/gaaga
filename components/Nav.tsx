@@ -7,11 +7,9 @@ import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 
 import GaagaLogo from "@/assets/images/logo.svg";
-import CreatorsShowcase from "@/features/home/CreatorsShowcase";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showCreators, setShowCreators] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -37,8 +35,12 @@ const Navigation = () => {
       title: "Productions",
     },
     {
-      link: "/creatives",
-      title: "Originals",
+      link: "/stream",
+      title: "Gaaga's Pulse",
+    },
+    {
+      link: "/creative",
+      title: "For Creators",
     },
   ];
 
@@ -56,7 +58,7 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center uppercase text-white gap-28">
+        <ul className="hidden md:flex items-center uppercase text-white gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((nav) => (
             <li key={nav.link}>
               <Link href={nav.link}>{nav.title}</Link>
@@ -65,18 +67,18 @@ const Navigation = () => {
         </ul>
 
         {/* Desktop CTA buttons */}
-        <div className="hidden md:flex gap-5 items-center">
-          <button
-            onClick={() => setShowCreators(true)}
-            className="bg-accent py-3 border-2 border-accent px-8 text-sm text-black rounded-lg"
-          >
-            For Creators
-          </button>
+        <div className="hidden md:flex gap-3 items-center">
           <Link
-            href="/stream"
-            className="bg-transparent border-2 border-solid border-primary text-primary hover:text-accent py-3 px-8 text-sm rounded-lg"
+            href="/creatives"
+            className="bg-transparent border-2 border-solid border-primary text-primary hover:text-accent py-3 px-6 text-sm rounded-lg"
           >
             For Brands
+          </Link>
+          <Link
+            href="/store"
+            className="bg-transparent border-2 border-solid border-accent text-accent hover:bg-accent hover:text-black transition-colors duration-300 py-3 px-6 text-sm rounded-lg"
+          >
+            GG Store
           </Link>
         </div>
 
@@ -108,28 +110,23 @@ const Navigation = () => {
             ))}
           </ul>
           <div className="flex flex-col gap-3 px-4 pb-6">
-            <button
-              onClick={() => {
-                closeMenu();
-                setShowCreators(true);
-              }}
-              className="bg-accent py-3 border-2 border-accent px-8 text-sm text-black rounded-lg text-center"
-            >
-              For Creators
-            </button>
             <Link
-              href="/stream"
+              href="/creatives"
               onClick={closeMenu}
               className="bg-transparent border-2 border-solid border-primary text-primary hover:text-accent py-3 px-8 text-sm rounded-lg text-center"
             >
               For Brands
             </Link>
+            <Link
+              href="/store"
+              onClick={closeMenu}
+              className="bg-transparent border-2 border-solid border-accent text-accent py-3 px-8 text-sm rounded-lg text-center"
+            >
+              GG Store
+            </Link>
           </div>
         </div>
       </nav>
-      {showCreators && (
-        <CreatorsShowcase onClose={() => setShowCreators(false)} />
-      )}
     </div>
   );
 };
