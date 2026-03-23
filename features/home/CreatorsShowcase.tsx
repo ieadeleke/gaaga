@@ -92,7 +92,7 @@ const CreatorsShowcase = ({ onClose }: CreatorsShowcaseProps) => {
           {creators.map((creator) => (
             <Link
               key={creator.name}
-              href={`/contact-us?creator=${encodeURIComponent(creator.name)}`}
+              href={`/booking?talent=${encodeURIComponent(creator.name)}`}
               onClick={onClose}
               className="group relative rounded-xl overflow-hidden border border-white/10 hover:border-accent transition-colors duration-300"
             >

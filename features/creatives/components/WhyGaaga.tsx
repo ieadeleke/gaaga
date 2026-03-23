@@ -12,14 +12,14 @@ const WhyGaaga = () => {
         </div>
       </FadeIn>
       <div className="px-4 md:px-0">
-        <SlideUp>
+        {/* <SlideUp>
           <p className="text-xl md:text-3xl capitalize leading-relaxed text-center font-avenir-light text-accent max-w-[900px] md:w-287.75 mx-auto">
           Because cookie-cutter campaigns don&apos;t cut it anymore. Your audience
           knows the difference — and so do we. We move fast, we care about the
           match, and we stay in it with you the whole way. Giving you the right
           creator, the right story, the right result.
         </p>
-        </SlideUp>
+        </SlideUp> */}
         <StaggerContainer className="max-w-[900px] md:w-300 mx-auto mt-8 md:mt-12">
           <StaggerItem>
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-24 border-b py-4 md:py-5 border-solid border-white">

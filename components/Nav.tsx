@@ -58,12 +58,21 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop nav links */}
-        <ul className="hidden md:flex items-center uppercase text-white gap-8 absolute left-1/2 -translate-x-1/2">
-          {navLinks.map((nav) => (
-            <li key={nav.link}>
-              <Link href={nav.link}>{nav.title}</Link>
-            </li>
-          ))}
+        <ul className="hidden md:flex items-center uppercase gap-8 absolute left-1/2 -translate-x-1/2">
+          {navLinks.map((nav) => {
+            const isActive =
+              pathname === nav.link || pathname.startsWith(nav.link + "/");
+            return (
+              <li key={nav.link}>
+                <Link
+                  href={nav.link}
+                  className={`${isActive ? "text-accent" : "text-white hover:text-accent"} transition-colors`}
+                >
+                  {nav.title}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Desktop CTA buttons */}
@@ -100,14 +109,22 @@ const Navigation = () => {
               : "max-h-0 opacity-0 pointer-events-none"
           } overflow-hidden`}
         >
-          <ul className="flex flex-col items-center uppercase text-white gap-6 py-6">
-            {navLinks.map((nav) => (
-              <li key={nav.link}>
-                <Link href={nav.link} onClick={closeMenu}>
-                  {nav.title}
-                </Link>
-              </li>
-            ))}
+          <ul className="flex flex-col items-center uppercase gap-6 py-6">
+            {navLinks.map((nav) => {
+              const isActive =
+                pathname === nav.link || pathname.startsWith(nav.link + "/");
+              return (
+                <li key={nav.link}>
+                  <Link
+                    href={nav.link}
+                    onClick={closeMenu}
+                    className={`${isActive ? "text-accent" : "text-white hover:text-accent"} transition-colors`}
+                  >
+                    {nav.title}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="flex flex-col gap-3 px-4 pb-6">
             <Link

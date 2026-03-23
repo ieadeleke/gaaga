@@ -5,6 +5,9 @@ import Quote1Img from "@/assets/images/quote1.svg";
 import Quote2Img from "@/assets/images/quote2.svg";
 
 import CoverImg from "@/assets/images/cover.svg";
+import OriginalImg from "@/assets/images/original.svg";
+import LogoImg from "@/assets/images/logo-main.svg";
+import StarImg from "@/assets/images/star.svg";
 import { FadeIn, SlideIn, SlideUp } from "@/components/Motion";
 
 const HomeProps = () => {
@@ -70,11 +73,20 @@ const HomeProps = () => {
               </div>
             </SlideIn>
             <SlideIn direction="right" delay={0.2}>
-              <p className="text-base md:text-xl font-avenir-medium max-w-[480px] md:ml-auto uppercase mb-10 md:mb-20 md:text-right mt-10 md:mt-20">
-                Whether you&apos;re a creator ready to scale, a brand looking for
-                authentic reach, or an investor backing Africa&apos;s creative future,
-                Gaaga is the partner built for this moment.
-              </p>
+              <div className="relative group max-w-[520px] md:ml-auto mt-10 md:mt-20 mb-10 md:mb-20">
+                {/* glow frame */}
+                <div className="absolute -inset-2 rounded-[26px] bg-gradient-to-tr from-accent/30 via-transparent to-accent/10 blur opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+                {/* offset layer */}
+                <div className="absolute inset-0 -rotate-2 rounded-[22px] border border-black/10 bg-black/5" />
+                {/* main card */}
+                <div className="relative rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent shadow-[0_8px_28px_rgba(0,0,0,0.35)] transition-transform duration-300 group-hover:-translate-y-1">
+                  <Image src={OriginalImg} alt="" aria-hidden className="w-full object-cover" />
+                  <Image src={CoverImg} alt="" aria-hidden className="absolute inset-0 opacity-30 mix-blend-overlay" />
+                  {/* watermark + sticker */}
+                  <Image src={LogoImg} alt="" aria-hidden width={160} height={160} className="absolute left-4 bottom-4 w-16 opacity-60" />
+                  <Image src={StarImg} alt="" aria-hidden width={120} height={120} className="absolute right-4 top-4 w-10 opacity-90 transition-transform duration-300 group-hover:rotate-12" />
+                </div>
+              </div>
             </SlideIn>
           </div>
         </div>

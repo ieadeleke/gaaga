@@ -47,7 +47,7 @@ const ApproachMain = () => {
                 </div>
               </div>
             </div>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-black/30" />
+            {/* subtle bottom gradient removed as requested */}
           </div>
         </div>
       ))}

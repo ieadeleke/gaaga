@@ -2,6 +2,7 @@ import Image from "next/image";
 import GaageMain from "@/assets/images/gaaga-huge.svg";
 import OriginalImg from "@/assets/images/original.svg";
 import ArrowImg from "@/assets/images/arrow.svg";
+import StarImg from "@/assets/images/star.svg";
 import Link from "next/link";
 import { FadeIn, SlideIn, SlideUp } from "@/components/Motion";
 
@@ -9,15 +10,20 @@ const PulseHero = () => {
   return (
     <header className="pt-24 md:pt-40 bg-[#111]">
       <FadeIn>
-        <div className="max-w-[1800px] mx-auto flex items-center justify-center gap-3 md:gap-5 px-4">
-          <h4 className="text-2xl md:text-4xl text-white">Gaaga&apos;s Pulse</h4>
-          <Image
-            src={GaageMain}
-            alt="Gaaga stylish design"
-            width={1000}
-            height={1000}
-            className="w-[250px] md:w-[550px] h-full"
-          />
+        <div className="max-w-[1800px] mx-auto flex items-center justify-center px-4">
+          <div className="relative inline-block">
+            <Image
+              src={GaageMain}
+              alt="Gaaga"
+              width={1000}
+              height={1000}
+              className="w-[250px] md:w-[550px] h-full"
+            />
+            <div className="absolute -top-2 -right-2 md:top-1 md:-right-3 bg-black/70 border border-accent text-accent uppercase text-[10px] md:text-xs rounded-full px-2.5 py-1 flex items-center gap-1.5 backdrop-blur-sm">
+              <Image src={StarImg} alt="" width={14} height={14} className="w-3 h-3" />
+              <span>Editorial • Video • Events</span>
+            </div>
+          </div>
         </div>
       </FadeIn>
 

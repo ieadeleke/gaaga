@@ -17,7 +17,7 @@ const WhatWeDo = () => {
     {
       img: Home2,
       title: "Brand Partnerships",
-      subtitle: "We know Talents. We know brands. We're all about connecting brands with creators who convert.",
+      subtitle: "We know Talents. We know Brands. We're all about connecting brands with creators who convert.",
     },
     {
       img: Home3,

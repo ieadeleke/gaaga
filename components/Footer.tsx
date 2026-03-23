@@ -4,35 +4,15 @@ import ArrowImg from "@/assets/images/arrow.svg";
 import LogoImg from "@/assets/images/logo-main.svg";
 import LogoJiggleImg from "@/assets/images/logo-jiggle.svg";
 import Image from "next/image";
-import Sitelinks from "@/utils/SiteLinks";
 import { FadeIn, SlideIn } from "@/components/Motion";
 
 const Footer = () => {
   const FooterSiteLinks = [
-    {
-      label: "Work",
-      link: Sitelinks.work,
-    },
-    {
-      label: "Services",
-      link: Sitelinks.services,
-    },
-    {
-      label: "Solutions",
-      link: Sitelinks.solutions,
-    },
-    {
-      label: "Insights",
-      link: Sitelinks.insights,
-    },
-    {
-      label: "Technology",
-      link: Sitelinks.technology,
-    },
-    {
-      label: "Company",
-      link: Sitelinks.company,
-    },
+    { label: "About",         link: "/about-us" },
+    { label: "Productions",   link: "/productions" },
+    { label: "Gaaga's Pulse", link: "/stream" },
+    { label: "For Creators",  link: "/creative" },
+    { label: "Store",         link: "/store" },
   ];
   const FooterSocialLinks = [
     {
@@ -75,14 +55,14 @@ const Footer = () => {
           <div className="grid grid-cols-2 mb-10 md:mb-20">
             <div>
               <h5 className="uppercase mb-5 font-avenir-light! text-black font-normal">
-                Agency
+                Explore
               </h5>
               <ul className="flex flex-col gap-3">
                 {FooterSiteLinks.map(({ label, link }) => (
                   <li key={label}>
                     <Link
                       href={link}
-                      className="text-black/70 font-avenir-light"
+                      className="text-black/70 font-avenir-light cursor-pointer"
                     >
                       {label}
                     </Link>
@@ -99,7 +79,7 @@ const Footer = () => {
                   <li key={label}>
                     <Link
                       href={link}
-                      className="text-black/70 font-avenir-light"
+                      className="text-black/70 font-avenir-light cursor-pointer"
                     >
                       {label}
                     </Link>

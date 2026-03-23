@@ -42,7 +42,7 @@ const MeetTheTeam = () => {
             </p>
             <div className="flex items-center gap-3 text-white/90 font-avenir-light">
               <span className="text-lg md:text-2xl">×</span>
-              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 opacity-90" />
             </div>
           </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
@@ -97,7 +97,7 @@ const MeetTheTeam = () => {
             </p>
             <div className="flex items-center gap-3 text-white/90 font-avenir-light">
               <span className="text-lg md:text-2xl">×</span>
-              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 opacity-90" />
             </div>
           </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
@@ -152,7 +152,7 @@ const MeetTheTeam = () => {
             </p>
             <div className="flex items-center gap-3 text-white/90 font-avenir-light">
               <span className="text-lg md:text-2xl">×</span>
-              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 opacity-90" />
             </div>
           </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">
@@ -207,7 +207,7 @@ const MeetTheTeam = () => {
             </p>
             <div className="flex items-center gap-3 text-white/90 font-avenir-light">
               <span className="text-lg md:text-2xl">×</span>
-              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 invert opacity-90" />
+              <Image src={LogoImg} alt="Gaaga" width={120} height={120} className="w-20 md:w-28 opacity-90" />
             </div>
           </div>
           <div className="absolute h-full w-full inset-0 z-20 opacity-0 main-img">

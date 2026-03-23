@@ -30,9 +30,6 @@ const OurEcosystem = () => {
           <h3 className="text-2xl md:text-3xl uppercase text-accent">
             Our Ecosystem
           </h3>
-          <p className="text-white/50 uppercase font-avenir-light text-sm md:text-base tracking-widest mt-1">
-            Our Services
-          </p>
         </div>
       </SlideUp>
       <StaggerContainer className="flex text-white flex-col max-w-300 mx-auto">
