@@ -105,11 +105,11 @@ const Navigation = () => {
         <div
           className={`absolute left-0 right-0 top-full mt-2 bg-black border-2 border-accent rounded-lg md:hidden transition-all duration-300 ease-in-out ${
             isOpen
-              ? "max-h-96 opacity-100"
+              ? "max-h-[85vh] opacity-100"
               : "max-h-0 opacity-0 pointer-events-none"
-          } overflow-hidden`}
+          } overflow-hidden overflow-y-auto`}
         >
-          <ul className="flex flex-col items-center uppercase gap-6 py-6">
+          <ul className="flex items-center justify-center uppercase gap-8 py-6 flex-wrap">
             {navLinks.map((nav) => {
               const isActive =
                 pathname === nav.link || pathname.startsWith(nav.link + "/");
@@ -119,6 +119,7 @@ const Navigation = () => {
                     href={nav.link}
                     onClick={closeMenu}
                     className={`${isActive ? "text-accent" : "text-white hover:text-accent"} transition-colors`}
+                    aria-current={isActive ? "page" : undefined}
                   >
                     {nav.title}
                   </Link>
@@ -126,18 +127,18 @@ const Navigation = () => {
               );
             })}
           </ul>
-          <div className="flex flex-col gap-3 px-4 pb-6">
+          <div className="flex justify-center gap-3 px-4 pb-6">
             <Link
               href="/creatives"
               onClick={closeMenu}
-              className="bg-transparent border-2 border-solid border-primary text-primary hover:text-accent py-3 px-8 text-sm rounded-lg text-center"
+              className="bg-transparent border-2 border-solid border-primary text-primary hover:text-accent py-3 px-6 text-sm rounded-lg"
             >
               For Brands
             </Link>
             <Link
               href="/store"
               onClick={closeMenu}
-              className="bg-transparent border-2 border-solid border-accent text-accent py-3 px-8 text-sm rounded-lg text-center"
+              className="bg-transparent border-2 border-solid border-accent text-accent hover:bg-accent hover:text-black transition-colors duration-300 py-3 px-6 text-sm rounded-lg"
             >
               GG Store
             </Link>
