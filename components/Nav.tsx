@@ -26,22 +26,10 @@ const Navigation = () => {
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
-    {
-      link: "/about-us",
-      title: "About",
-    },
-    {
-      link: "/productions",
-      title: "Productions",
-    },
-    {
-      link: "/stream",
-      title: "Gaaga's Pulse",
-    },
-    {
-      link: "/creative",
-      title: "For Creators",
-    },
+    { link: "/about-us", title: "About" },
+    { link: "/productions", title: "Productions" },
+    { link: "/stream", title: "Gaaga's Pulse" },
+    { link: "/store", title: "GG Store" },
   ];
 
   return (
