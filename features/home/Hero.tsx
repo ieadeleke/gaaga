@@ -98,7 +98,7 @@ const HomeHero = () => {
             height={1000}
             className="w-full h-full object-cover"
           />
-          <div className="text-center max-w-[752px] mx-auto absolute inset-0 top-6 md:top-20 px-4">
+          <div className="text-center max-w-[752px] mx-auto absolute inset-0 top-6 md:top-20 px-4 z-30">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,14 +128,14 @@ const HomeHero = () => {
               >
                 For Creators
               </button>
-              <button className="border-2 rounded-lg bg-transparent border-accent font-avenir-medium text-accent py-2 md:py-3 px-3 md:px-4 text-xs md:text-base capitalize">
+              <a href="/creatives" className="border-2 rounded-lg bg-transparent border-accent font-avenir-medium text-accent py-2 md:py-3 px-3 md:px-4 text-xs md:text-base capitalize">
                 For Brands
-              </button>
+              </a>
             </motion.div>
           </div>
 
 
-          <div className="hidden md:block absolute inset-0 pointer-events-none">
+          <div className="hidden md:block absolute inset-0 pointer-events-none z-20">
             {visible && (
               <button
                 type="button"

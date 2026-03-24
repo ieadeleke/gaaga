@@ -84,10 +84,10 @@ const Navigation = () => {
             For Brands
           </Link>
           <Link
-            href="/store"
+            href="/creative"
             className="bg-transparent border-2 border-solid border-accent text-accent hover:bg-accent hover:text-black transition-colors duration-300 py-3 px-6 text-sm rounded-lg"
           >
-            GG Store
+            For Creators
           </Link>
         </div>
 
@@ -136,11 +136,11 @@ const Navigation = () => {
               For Brands
             </Link>
             <Link
-              href="/store"
+              href="/creative"
               onClick={closeMenu}
               className="bg-transparent border-2 border-solid border-accent text-accent hover:bg-accent hover:text-black transition-colors duration-300 py-3 px-6 text-sm rounded-lg"
             >
-              GG Store
+              For Creators
             </Link>
           </div>
         </div>

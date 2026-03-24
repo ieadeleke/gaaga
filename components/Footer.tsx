@@ -16,20 +16,24 @@ const Footer = () => {
   ];
   const FooterSocialLinks = [
     {
+      label: "Facebook",
+      link: "https://www.facebook.com/share/15dsdb47J5A/?mibextid=wwXIfr",
+    },
+    {
       label: "Instagram",
-      link: "/instagram",
+      link: "https://www.instagram.com/gaaga_world",
     },
     {
       label: "YouTube",
-      link: "/youtube",
+      link: "https://youtube.com/@gaagaworld",
     },
     {
       label: "X",
-      link: "/x",
+      link: "https://x.com/gaagaagency",
     },
     {
       label: "TikTok",
-      link: "/tiktok",
+      link: "https://www.tiktok.com/@gaaga.digital",
     },
   ];
   return (
@@ -80,6 +84,8 @@ const Footer = () => {
                     <Link
                       href={link}
                       className="text-black/70 font-avenir-light cursor-pointer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {label}
                     </Link>
