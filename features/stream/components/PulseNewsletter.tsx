@@ -9,9 +9,9 @@ const PulseNewsletter = () => {
       <Image
         src={PatternImg}
         alt=""
-        width={1000}
-        height={1000}
+        fill
         className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
+        priority
       />
       <div className="relative z-10 max-w-[640px] mx-auto">
         <SlideUp>

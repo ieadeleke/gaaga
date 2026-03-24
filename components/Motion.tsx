@@ -47,7 +47,7 @@ export const SlideIn = ({
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.7, delay, ease: "easeOut" }}
-    className={className}
+    className={`overflow-x-clip ${className ?? ""}`}
   >
     {children}
   </motion.div>

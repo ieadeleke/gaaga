@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,6 +10,8 @@ import GaagaLogo from "@/assets/images/logo.svg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement | null>(null);
+  const [menuTop, setMenuTop] = useState<number>(0);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,6 +25,23 @@ const Navigation = () => {
     };
   }, [isOpen]);
 
+  // Position the mobile menu using the live nav height to avoid initial overflow
+  useEffect(() => {
+    const updateTop = () => {
+      if (!navRef.current) return;
+      const rect = navRef.current.getBoundingClientRect();
+      // rect.bottom gives distance from viewport top
+      setMenuTop(rect.bottom);
+    };
+    updateTop();
+    window.addEventListener("resize", updateTop);
+    window.addEventListener("scroll", updateTop, { passive: true });
+    return () => {
+      window.removeEventListener("resize", updateTop);
+      window.removeEventListener("scroll", updateTop);
+    };
+  }, []);
+
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
@@ -33,8 +52,8 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="fixed w-full top-2 px-4 md:px-20 pt-2 z-50">
-      <nav className="relative flex items-center justify-between bg-black border-2 border-accent px-3 md:px-5 py-4 md:py-5 rounded-lg">
+    <div className="fixed inset-x-0 top-2 px-4 md:px-20 pt-2 z-50 box-border">
+      <nav ref={navRef} className="relative flex items-center justify-between bg-black border-2 border-accent px-3 md:px-5 py-4 md:py-5 rounded-lg">
         <Link href="/">
           <Image
             src={GaagaLogo}
@@ -91,11 +110,12 @@ const Navigation = () => {
 
         {/* Mobile menu overlay */}
         <div
-          className={`absolute left-0 right-0 top-full mt-2 bg-black border-2 border-accent rounded-lg md:hidden transition-all duration-300 ease-in-out ${
+          className={`fixed left-0 right-0 bg-black border-2 border-accent rounded-lg md:hidden transition-all duration-300 ease-in-out box-border ${
             isOpen
               ? "max-h-[85vh] opacity-100"
               : "max-h-0 opacity-0 pointer-events-none"
           } overflow-hidden overflow-y-auto`}
+          style={{ top: menuTop + 8 }}
         >
           <ul className="flex items-center justify-center uppercase gap-8 py-6 flex-wrap">
             {navLinks.map((nav) => {

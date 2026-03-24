@@ -27,9 +27,9 @@ const AboutProps = () => {
           <Image
             src={GaageMain}
             alt="Gaaga about hero design"
-            width={1000}
-            height={1200}
-            className="absolute inset-0 z-10 w-full h-full md:min-w-[1240px]"
+            fill
+            className="absolute inset-0 z-10 w-full h-full object-cover md:min-w-[1240px]"
+            priority
           />
         </div>
       </div>

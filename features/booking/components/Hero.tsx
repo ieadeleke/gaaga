@@ -6,10 +6,10 @@ import { SlideUp, ScaleIn } from "@/components/Motion";
 const BookingHero = () => {
   return (
     <header className="pt-24 md:pt-40 relative overflow-hidden bg-[#111]">
-      <Image src={Light} alt="light gradient" className="absolute top-0" width={1000} height={1000} />
+      <Image src={Light} alt="light gradient" className="absolute inset-0 w-full h-full object-cover" fill priority />
       <ScaleIn className="px-4 md:px-24">
-        <div className="max-w-[1800px] mx-auto relative">
-          <Image src={ContactImg} alt="" className="w-full h-full" width={1000} height={1000} />
+        <div className="max-w-[1800px] mx-auto relative min-h-[280px] md:min-h-[520px] overflow-hidden rounded-2xl md:rounded-[30px]">
+          <Image src={ContactImg} alt="" fill className="w-full h-full object-cover" priority />
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <SlideUp>
               <div className="text-center">

@@ -70,7 +70,7 @@ const HomeHero = () => {
   };
 
   return (
-    <header className="pt-24 md:pt-40 relative">
+    <header className="pt-28 md:pt-40 relative">
       <div>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -89,16 +89,17 @@ const HomeHero = () => {
           ref={heroRef}
           onMouseMove={handleMove}
           onMouseLeave={handleLeave}
-          className={`sawtooth-mask relative ${!expanded && 'mb-8 md:mb-16'}`}
+          className={`sawtooth-mask relative ${!expanded && 'mb-16 md:mb-16'}`}
         >
           <Image
             src={expanded ? HeroStillImg : Hero4Img}
             alt="checklist"
-            width={1000}
-            height={1000}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
           />
-          <div className="text-center max-w-[752px] mx-auto absolute inset-0 top-6 md:top-20 px-4 z-30">
+          <div className="text-center max-w-[752px] mx-auto absolute inset-0 top-0 md:top-20 px-4 z-30 pt-10 pb-16 md:pt-0 md:pb-0">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -16,7 +16,7 @@ const CreativeHero = () => {
         </p>
         <Link
           href=""
-          className="uppercase font-milker bg-accent relative py-3 md:py-5 rounded-lg px-5 md:px-7 text-base md:text-lg"
+          className="uppercase font-milker bg-accent inline-block text-center break-words max-w-[90%] md:max-w-none py-3 md:py-5 rounded-lg px-4 md:px-7 text-sm md:text-lg"
         >
           Get Started
         </Link>
@@ -24,9 +24,9 @@ const CreativeHero = () => {
       <Image
         src={LayerImg}
         alt="background gradient"
-        width={1000}
-        height={1000}
-        className="absolute inset-0 w-full h-full z-20"
+        fill
+        className="absolute inset-0 w-full h-full object-cover z-20"
+        priority
       />
     </header>
   );

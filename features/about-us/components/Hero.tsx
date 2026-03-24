@@ -6,7 +6,7 @@ import { FadeIn, SlideIn, SlideUp } from "@/components/Motion";
 
 const AboutHero = () => {
   return (
-    <header className="pt-24 md:pt-40 bg-[#111]">
+    <header className="pt-28 md:pt-40 bg-[#111]">
       <FadeIn>
         <div className="max-w-[1800px] mx-auto flex items-top justify-center gap-3 md:gap-5 px-4">
           <h4 className="text-2xl md:text-4xl text-white">About</h4>

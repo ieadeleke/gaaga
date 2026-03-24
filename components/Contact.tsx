@@ -11,38 +11,18 @@ interface ContactUsProps {
 const ContactUsPage = ({ hidePattern, page }: ContactUsProps) => {
   return (
     <div className="px-4 md:px-20 max-w-[1450px] mx-auto z-20 relative">
-      {/* <div className="border-20 rounde d-[20px] border-solid border-[#FFF5CD] relative"> */}
-      <div className="relative">
+      {/* Container with border, rounded and overflow to clip the image */}
+      <div className="relative min-h-[360px] md:min-h-0 overflow-hidden border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD]">
         {hidePattern ? (
           page === "home" ? (
-            <Image
-              src={HomeContactImg}
-              alt="contact box"
-              width={1000}
-              height={1000}
-              className="w-full border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD] relative"
-            />
+            <Image src={HomeContactImg} alt="contact box" fill className="object-cover" priority />
           ) : (
-            <Image
-              src={SmilingWoman}
-              alt="contact box"
-              width={1000}
-              height={1000}
-              className="w-full border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD] relative"
-            />
+            <Image src={SmilingWoman} alt="contact box" fill className="object-cover" priority />
           )
         ) : (
-          <div className="rounded-full">
-            <Image
-              src={ContactImg}
-              alt="contact box"
-              width={1000}
-              height={1000}
-              className="w-full border-8 md:border-20 rounded-2xl md:rounded-[30px] border-solid border-[#FFF5CD] relative"
-            />
-          </div>
+          <Image src={ContactImg} alt="contact box" fill className="object-cover" priority />
         )}
-        <div className="w-full h-full absolute bg-black/10 inset-0 flex items-center justify-center rounded-2xl md:rounded-[30px]">
+        <div className="w-full h-full absolute bg-black/10 inset-0 flex items-center justify-center">
           <div className="max-w-[590px] text-center mx-auto px-4">
             <h3 className="text-lg md:text-2xl mb-3 uppercase text-white">
               Your next chapter starts here.
