@@ -10,18 +10,18 @@ const ContactHero = () => {
       <Image
         src={Light}
         alt="light gradient"
-        className="absolute top-0"
-        width={1000}
-        height={1000}
+        className="absolute inset-0 w-full h-full object-cover"
+        fill
+        priority
       />
       <ScaleIn className="px-4 md:px-24">
-        <div className="max-w-[1800px] mx-auto relative">
+        <div className="max-w-[1800px] mx-auto relative min-h-[280px] md:min-h-[520px] overflow-hidden rounded-2xl md:rounded-[30px]">
           <Image
             src={ContactImg}
             alt=""
-            className="w-full h-full"
-            width={1000}
-            height={1000}
+            fill
+            className="w-full h-full object-cover"
+            priority
           />
           <div className="absolute inset-0 flex items-center justify-center px-4">
             <SlideUp>

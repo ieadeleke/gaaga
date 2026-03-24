@@ -49,6 +49,13 @@ body {
   font-family: 'Avenir Next';
 }
 
+/* Guard against horizontal overflow from animated elements/transforms */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -174,6 +181,15 @@ h6 {
   /* Style adjustments for your image */
   object-fit: cover;
   background-color: #FDC500; /* Matching your yellow brand color */
+}
+
+/* Mobile: keep original mask; add a bit of height so buttons fit */
+@media (max-width: 767px) {
+  .sawtooth-mask {
+    min-height: 350px; /* tighter mobile hero */
+    height: auto;
+    aspect-ratio: auto;
+  }
 }
 
 /* Interactive button hover shadows */

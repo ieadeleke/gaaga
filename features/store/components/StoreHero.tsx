@@ -6,7 +6,7 @@ import StarImg from "@/assets/images/star.svg";
 
 const StoreHero = () => {
   return (
-    <header className="pt-24 md:pt-40 bg-[#111]">
+    <header className="pt-28 md:pt-40 bg-[#111]">
       <FadeIn>
         <div className="max-w-[1800px] mx-auto flex items-center justify-center px-4">
           <div className="relative inline-block">

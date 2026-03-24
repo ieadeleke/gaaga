@@ -8,7 +8,7 @@ import { FadeIn, SlideIn, SlideUp } from "@/components/Motion";
 
 const PulseHero = () => {
   return (
-    <header className="pt-24 md:pt-40 bg-[#111]">
+    <header className="pt-28 md:pt-40 bg-[#111]">
       <FadeIn>
         <div className="max-w-[1800px] mx-auto flex items-center justify-center px-4">
           <div className="relative inline-block">
@@ -46,7 +46,7 @@ const PulseHero = () => {
               </div>
               <Link
                 href="#categories"
-                className="inline-flex items-center gap-3 bg-accent text-black uppercase font-milker py-3 md:py-4 px-6 md:px-8 rounded-lg text-sm md:text-base"
+                className="inline-flex flex-wrap items-center justify-center gap-3 bg-accent text-black uppercase font-milker py-3 md:py-4 px-5 md:px-8 rounded-lg text-sm md:text-base max-w-full text-center"
               >
                 Explore the Pulse
                 <Image src={ArrowImg} alt="" width={20} height={20} />

@@ -14,18 +14,18 @@ const HomeProps = () => {
   return (
     <section className="bg-white">
       <FadeIn>
-        <div className="bg-accent pt-7 pb-7 w-full text-center relative">
+        <div className="bg-accent py-5 md:py-7 w-full text-center relative">
           <h4 className="text-xl md:text-2xl">We sit at the intersection of talent, capital, and culture.</h4>
         <Image
           src={CoverImg}
           alt="cover"
-          width={1000}
-          height={1000}
-          className="h-full inset-0 w-full absolute"
+          fill
+          className="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none"
+          priority
         />
         </div>
       </FadeIn>
-      <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-2 px-6 md:px-20 pb-10 md:pb-14 pt-8 md:pt-12 bg-white gap-8 md:gap-0">
+      <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-2 px-6 md:px-20 pb-8 md:pb-12 pt-4 md:pt-8 bg-white gap-8 md:gap-0">
         <div className="mt-6 md:mt-10">
           <SlideIn direction="left">
             <p className="text-base md:text-xl font-avenir-medium max-w-[550px] uppercase mb-10 md:mb-20">
@@ -68,12 +68,12 @@ const HomeProps = () => {
                   alt="quote 2"
                   width={182}
                   height={182}
-                  className="absolute top-8 md:top-14 left-2 md:left-10 z-10 w-16 md:w-auto"
+                  className="hidden md:block absolute top-8 md:top-14 left-2 md:left-10 z-10 w-16 md:w-auto"
                 />
               </div>
             </SlideIn>
             <SlideIn direction="right" delay={0.2}>
-              <div className="relative group max-w-[520px] md:ml-auto mt-10 md:mt-20 mb-10 md:mb-20">
+              <div className="relative group max-w-[520px] md:ml-auto mt-10 md:mt-20 mb-10 md:mb-20 hidden md:block">
                 {/* glow frame */}
                 <div className="absolute -inset-2 rounded-[26px] bg-gradient-to-tr from-accent/30 via-transparent to-accent/10 blur opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
                 {/* offset layer */}
